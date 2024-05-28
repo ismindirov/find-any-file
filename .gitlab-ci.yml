@@ -8,6 +8,7 @@ find name test:
   script:
     - chmod +x find-word.sh
     - ./find-word.sh
+  allow_failure: false
 
 
 yamllint:
