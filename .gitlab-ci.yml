@@ -1,5 +1,6 @@
 stages:
   - test
+  - lint
 
 
 find name test:
@@ -7,4 +8,16 @@ find name test:
   script:
     - chmod +x find-word.sh
     - ./find-word.sh
-    
+
+
+yamllint:
+  stage: lint
+  image: python:3.9
+  before_script:
+    - pip install yamllint
+  script:
+    - yamllint .
+  only:
+    - branches
+    - commit
+
