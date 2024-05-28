@@ -16,7 +16,7 @@ yamllint:
   before_script:
     - pip install yamllint
   script:
-    - yamllint .
+    - yamllint --fix .
   only:
     - branches
     - commit
