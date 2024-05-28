@@ -1,5 +1,9 @@
+stages:
+  - test
+
+
 find name test:
-  stage: search_name_test
+  stage: test
   script:
     - chmod +x find-word.sh
     - ./find-word.sh
